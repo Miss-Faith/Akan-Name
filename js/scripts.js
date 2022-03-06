@@ -20,45 +20,44 @@ function dayLimit() {
 }
 dayLimit();
 
-let CC = parseInt(yearValue.slice(0,2));
+let CC =
+
+parseInt(yearValue.slice(0,2));
 let YY = parseInt(yearValue.slice(2,4));
-let MM = function monthNumber() {
+let MM = function MonthKeyValue() {
   if (monthValue === "January") {
-    return 1;
-  }
-  else if (monthValue === "February") {
-    return 2;
-  }
-  else if (monthValue === "March") {
-    return 3;
-  }
-  else if (monthValue === "April") {
+    return 1 - 1;
+  }else if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0) {
+    return 4 - 1;
+  }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0 ) {
     return 4;
-  }
-  else if (monthValue === "May") {
+  }else if (monthValue === "February" && parseInt(yearValue) % 100 === 0 ) {
+    return 4;
+  }else if (monthValue === "March") {
+    return 4;
+  }else if (monthValue === "April") {
+    return 0;
+  }else if (monthValue === "May") {
+    return 2;
+  }else if (monthValue === "June") {
     return 5;
-  }
-  else if (monthValue === "June") {
+  }else if (monthValue === "July") {
+    return 0;
+  }else if (monthValue === "August") {
+    return 3;
+  }else if (monthValue === "September") {
+    return 6;
+  }else if (monthValue === "October") {
+    return 1;
+  }else if (monthValue === "November") {
+    return 4;
+  }else {
     return 6;
   }
-  else if (monthValue === "July") {
-    return 7;
-  }
-  else if (monthValue === "August") {
-    return 8;
-  }
-  else if (monthValue === "September") {
-    return 9;
-  }
-  else if (monthValue === "October") {
-    return 10;
-  }
-  else if (monthValue === "November") {
-    return 11;
-  }
-  else {
-    return 12;
-  }
 }
-monthNumber ();
-let DD = dayValue;
+MonthKeyValue();
+
+
+let dayOfTheWeek = (((CC/4) -2 * CC-1) + ((5*YY/4)) + ((26*(MM+1)/10)) + DD ) % 7;
+
+Math.floor(YY/4) + DD + MM +
