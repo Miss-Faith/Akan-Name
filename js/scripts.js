@@ -20,10 +20,36 @@ function dayLimit() {
 }
 dayLimit();
 
-let CC =
+  let century = function calculateCentury() {
+    let centruryValue = parseInt(yearValue.slice(0,2));
+    if (centuryValue < 17) {
+      let keyValue = Math.ceil((1700 - parseInt(yearValue))/400);
+      let yearRevised = yearValue + (keyValue * 400);
+      return Math.floor(yearRevised/100);
+    }else if (centuryValue > 20) {
+      let keyValue = Math.ceil((parseInt(yearValue) - 2000)/400);
+      let yearRevised = yearValue - (keyValue * 400);
+      return Math.floor(yearRevised/100);
+    }else {
+      parseInt(yearValue.slice(0,2));
+    }
+  }
+  calculateCentury();
 
-parseInt(yearValue.slice(0,2));
+  let CC = function centuryKeyValue() {
+    if (century = 17) {
+      return 4;
+    }else if (century = 18) {
+      return 2;
+    }else if (century = 19) {
+      return 0;
+    }else if (century = 20) {
+      return 6;
+    }
+  }
+
 let YY = parseInt(yearValue.slice(2,4));
+//
 let MM = function MonthKeyValue() {
   if (monthValue === "January") {
     return 1 - 1;
@@ -57,7 +83,4 @@ let MM = function MonthKeyValue() {
 }
 MonthKeyValue();
 
-
-let dayOfTheWeek = (((CC/4) -2 * CC-1) + ((5*YY/4)) + ((26*(MM+1)/10)) + DD ) % 7;
-
-Math.floor(YY/4) + DD + MM +
+let dayOfTheWeek = (Math.floor(YY/4) + DD + MM + CC + YY) % 7;
