@@ -19,3 +19,46 @@ function dayLimit() {
   }
 }
 dayLimit();
+
+let CC = parseInt(yearValue.slice(0,2));
+let YY = parseInt(yearValue.slice(2,4));
+let MM = function monthNumber() {
+  if (monthValue === "January") {
+    return 1;
+  }
+  else if (monthValue === "February") {
+    return 2;
+  }
+  else if (monthValue === "March") {
+    return 3;
+  }
+  else if (monthValue === "April") {
+    return 4;
+  }
+  else if (monthValue === "May") {
+    return 5;
+  }
+  else if (monthValue === "June") {
+    return 6;
+  }
+  else if (monthValue === "July") {
+    return 7;
+  }
+  else if (monthValue === "August") {
+    return 8;
+  }
+  else if (monthValue === "September") {
+    return 9;
+  }
+  else if (monthValue === "October") {
+    return 10;
+  }
+  else if (monthValue === "November") {
+    return 11;
+  }
+  else {
+    return 12;
+  }
+}
+monthNumber ();
+let DD = dayValue;
