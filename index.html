@@ -14,11 +14,12 @@
           <fieldset>
             <legend>Personal Details</legend>
             <label for="day" >Day:</label><br>
-            <input type="number" id="day" placeholder="DD" value="" name="day" min="1" max="31"><br>
+            <input type="number" id="day" placeholder="Day" value="" name="day" min="1" max="31" required><br>
 
             <label for="month" >Month:</label><br>
-            <select name="month" id="month">
-              <option value="January" placeholder="Month">January</option>
+            <select name="month" id="month" required>
+              <option value="" disabled selected>Month</option>
+              <option value="January">January</option>
               <option value="February">February</option>
               <option value="March">March</option>
               <option value="April">April</option>
@@ -33,19 +34,20 @@
             </select><br>
 
             <label for="year" >Year:</label><br>
-            <input type="number" name="year" id="year" min="1900" max="2100" placeholder="YYYY"><br>
+            <input type="number" name="year" id="year" min="1900" max="2100" placeholder="Year" required><br>
 
             <label for="gender">Select your Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male">
+            <input type="radio" id="male" name="gender" value="male" required>
             <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br>
+
+            <input type="submit" id="getAkanName" value="Get Akan Name">
           </fieldset>
-          <input type="submit" id="getname" value="Generate Name"><br>
         </form>
+
         <form onsubmit="return clearInput()">
           <input type="submit"  value="Clear input" class="clear">
-
         </form>
 
       </div>
