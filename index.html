@@ -13,12 +13,32 @@
         <form id="birth_details">
           <fieldset>
             <legend>Personal Details</legend>
-            <label for="dob">Date of Birth:</label><br>
-            <input type="date" name="dob"><br>
+            <label for="day" >Day:</label><br>
+            <input type="number" id="day" name="day" min="1" max="31"><br>
+
+            <label for="month" >Month:</label><br>
+            <select name="month" id="month" onchange="dayLimit();">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select><br>
+
+            <label for="year" >Year:</label><br>
+            <input type="number" name="year" id="year" min="1900" max="2100"><br>
+
             <label for="gender">Select your Gender:</label><br>
-            <input type="radio" id="male" name="male">
+            <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label>
-            <input type="radio" id="female" name="female" value="Female">
+            <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
           </fieldset>
         </form>
