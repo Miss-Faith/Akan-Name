@@ -3,10 +3,11 @@ function getAkanName () {
   let maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   let femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-  let yearValue = document.getElementById('year').innerHTML;
-  let monthValue = document.getElementById('month').innerHTML;
+  let yearValue = document.getElementById('year').value;
+  let monthValue = document.getElementById('month').value;
   let dayValue = parseInt(document.getElementById('day').value);
-  let genderValue = document.getElementById("gender").value;
+  let genderValue = document.querySelector('input[name="gender"]:checked').val();
+
 /*
   function dayLimit() {
     let maxday = document.getElementById("day");
@@ -88,7 +89,7 @@ function getAkanName () {
 
   let dayOfTheWeek = (Math.floor(YY/4) + DD + MM + CC + YY) % 7;
 
-  if (genderValue === "male") {
+  if (genderValue == "male") {
     switch (dayOfTheWeek) {
       case 0:
         document.getElementById('result').textContent = "You were born on a " + daysofTheWeek[0] + " : your Akan name is " + maleAkanNames[0];
@@ -133,7 +134,7 @@ function getAkanName () {
       default:
         alert("No Akan Name. Verify your inputs are correct.");
     }
-  }else if (genderValue === "female") {
+  }else if (genderValue == "female") {
     switch (dayOfTheWeek) {
       case 0:
         document.getElementById('result').textContent = "You were born on a ${daysofTheWeek[0]}: your Akan name is " + maleAkanNames[0];
@@ -172,4 +173,3 @@ function getAkanName () {
     }
   }
 }
-getAkanName ();
