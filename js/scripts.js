@@ -10,22 +10,18 @@ function getAkanName (event) {
   let dayValue = parseInt(document.getElementById('day').value);
   let genderValue = document.querySelector('input[name="gender"]:checked').value;
 
-
-
   function validateDate() {
-    if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 31 || monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 31 ) {
-      alert("the maximum date should be 29");
-    }else if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 30 || monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 30) {
-      alert("the maximum date should be 29");
-    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue === 29) {
-      alert("the maximum date should be 28");
+    if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue > 29 || monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue > 29) {
+      document.getElementById('day').value = 29;
+    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue > 28) {
+      document.getElementById('day').value = 28;
     }else if (monthValue === "April" && dayValue === 31 || monthValue === "June" && dayValue === 31  || monthValue === "September" && dayValue === 31  || monthValue === "November" && dayValue === 31 ) {
-      alert("the maximum date should be 30");
+      document.getElementById('day').value = 30;
     }else {
       return false;
     }
   }
-validateDate();
+  validateDate()
 
 // computes inputs for the days of the week computation
   let getCentury = function () {
