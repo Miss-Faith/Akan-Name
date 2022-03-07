@@ -13,7 +13,7 @@ function getAkanName (event) {
   function validateDate() {
     if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue > 29 || monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue > 29) {
       document.getElementById('day').value = 29;
-    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue > 28) {
+    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue > 28 || monthValue === "February" && parseInt(yearValue) % 400 !== 0  && dayValue > 28) {
       document.getElementById('day').value = 28;
     }else if (monthValue === "April" && dayValue === 31 || monthValue === "June" && dayValue === 31  || monthValue === "September" && dayValue === 31  || monthValue === "November" && dayValue === 31 ) {
       document.getElementById('day').value = 30;
