@@ -1,7 +1,7 @@
 # [Project Portfolio Landing Page](https://miss-faith.github.io/Akan-Name/)
 #### By [Faith Mwangi](https://github.com/miss-faith)
 ### Description
-A simple website that gives details about my current projects to date.
+A web application that generates the Akan Name based on the birth details and gender inputs.
 ## Demo
 Here is a working live demo: https://miss-faith.github.io/Akan-Name/
 ## Site
