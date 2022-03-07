@@ -10,25 +10,23 @@ function getAkanName (event) {
   let dayValue = parseInt(document.getElementById('day').value);
   let genderValue = document.querySelector('input[name="gender"]:checked').value;
 
-  function validate() {
-    if monthValue ===
-  }
+
 
   function validateDate() {
-    if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 31 || "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 31 ) {
-      alert(the maximum date should be 29);
-    }else if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 30 || "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 30) {
-      alert(the maximum date should be 29);
-    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue === 31 || 30 || 29) {
-      alert(the maximum date should be 28);
+    if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 31 || monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 31 ) {
+      alert("the maximum date should be 29");
+    }else if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 30 || monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 30) {
+      alert("the maximum date should be 29");
+    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue === 29) {
+      alert("the maximum date should be 28");
     }else if (monthValue === "April" && dayValue === 31 || monthValue === "June" && dayValue === 31  || monthValue === "September" && dayValue === 31  || monthValue === "November" && dayValue === 31 ) {
-      alert(the maximum date should be 30);
+      alert("the maximum date should be 30");
     }else {
-      maxday.max = 30;
+      return false;
     }
   }
-  dayLimit();
-*/
+validateDate();
+
 // computes inputs for the days of the week computation
   let getCentury = function () {
     let centuryValue = parseInt(yearValue.slice(0,2));
