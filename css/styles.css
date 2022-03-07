@@ -126,6 +126,10 @@ p {
   font-family: 'Syne Mono', monospace;
 }
 
+#form2 {
+  text-align: center;
+}
+
 .myform{
   border-radius: 5px;
   color: #000000;
