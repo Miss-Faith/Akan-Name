@@ -1,5 +1,6 @@
 function getAkanName (event) {
   event.preventDefault();
+// Declares variables
   let daysofTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   let femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
@@ -9,21 +10,26 @@ function getAkanName (event) {
   let dayValue = parseInt(document.getElementById('day').value);
   let genderValue = document.querySelector('input[name="gender"]:checked').value;
 
+  function validate() {
+    if monthValue ===
+  }
 
-  function dayLimit() {
-    let maxday = document.getElementById("day");
-    if (monthValue === "February" && parseInt(yearValue) % 4 === 0) {
-      maxday.max = 29;
-    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0) {
-      maxday.max = 28;
-    }else if (monthValue === "January" || monthValue === "March" || monthValue === "May" || monthValue === "July" || monthValue === "August" || monthValue === "October" || monthValue === "December") {
-    maxday.max = 31;
+  function validateDate() {
+    if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 31 || "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 31 ) {
+      alert(the maximum date should be 29);
+    }else if (monthValue === "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 100 !== 0  && dayValue === 30 || "February" && parseInt(yearValue) % 4 === 0 && parseInt(yearValue) % 400 === 0  && dayValue === 30) {
+      alert(the maximum date should be 29);
+    }else if (monthValue === "February" && parseInt(yearValue) % 4 !== 0  && dayValue === 31 || 30 || 29) {
+      alert(the maximum date should be 28);
+    }else if (monthValue === "April" && dayValue === 31 || monthValue === "June" && dayValue === 31  || monthValue === "September" && dayValue === 31  || monthValue === "November" && dayValue === 31 ) {
+      alert(the maximum date should be 30);
     }else {
       maxday.max = 30;
     }
   }
   dayLimit();
-
+*/
+// computes inputs for the days of the week computation
   let getCentury = function () {
     let centuryValue = parseInt(yearValue.slice(0,2));
     if (centuryValue < 17) {
@@ -132,9 +138,10 @@ function getAkanName (event) {
   }
   MM = getKeyMonth();
 
+//The function computes day of the week
   let dayOfTheWeek = (Math.floor(YY/4) + DD + MM + CC + YY) % 7;
 
-
+// Assigns the day if the week to the name of the day and the Akan name
   if (genderValue == "male") {
     switch (dayOfTheWeek) {
       case 0:
