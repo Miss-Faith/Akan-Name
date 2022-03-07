@@ -14,6 +14,7 @@ The project does not require any installations. To view the site:
 ## Technology Used
 * HTML - Used to build the webpage structure
 * CSS - Used to style the webpage
+* JavaScript - Used to develop the interactive application of the site and perform internal calculations
 ## Development
 ### Want to contribute? Great!
 To fix a bug or enhance an existing module, follow these steps:
