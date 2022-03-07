@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body>
-    <div class="container">
-      <h1>Akan Name Generator</h1>
-      <p>This web application calculates the day of the week you were born based on your birth details and then depending on your gender, outputs your Akan Name. <a class="research" href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">Akan names</a> are derived from Ghanian culture. The Akan people of Ghana frequently name their children the name that corresponds to the day of the week that they were born. </</p>
-    </div>
+    <h1>Akan Name Generator</h1>
 
     <div id="main_container">
-      <div id="container">
-        <form id="getdetails" onsubmit="return getAkanName()">
+      <p>Based on your birth details and gender, this web application calculates the day of the week you were born and outputs your Akan Name. <a class="research" href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">Akan names</a> are derived from Ghanian culture. The Akan people of Ghana frequently name their children the name that corresponds to the day of the week that they were born. </</p>
+      <div id="container1">
+        <form class="myform" onsubmit="return getAkanName()">
           <p>To find out your Akan name; fill the form below and click the get Akan Name button.</p>
           <fieldset>
             <legend>Personal Details</legend>
@@ -57,8 +55,8 @@
         </form>
       </div>
 
-      <div class="container">
-        <h3 id="displayname">Your Akan name will be displayed here: </h3>
+      <div id="container2">
+        <p id="displayname">Your Akan name will be displayed here: </p>
         <p id="result"></p>
       </div>
 
