@@ -14,7 +14,7 @@
       <p>Based on your birth details and gender, this web application calculates the day of the week you were born and outputs your Akan Name. <a class="research" href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">Akan names</a> are derived from Ghanian culture. The Akan people of Ghana frequently name their children the name that corresponds to the day of the week that they were born. </</p>
       <div id="container1">
         <form class="myform" onsubmit="return getAkanName()">
-          <p>To find out your Akan name; fill the form below and click the get Akan Name button.</p>
+          <p id="description">To find out your Akan name;<br> fill the form below and click - get Akan Name.</p>
           <fieldset>
             <legend>Personal Details</legend>
             <label for="day" >Day:</label><br>
@@ -46,7 +46,7 @@
             <input type="radio" id="female" name="gender" value="female" required>
             <label for="female">Female</label><br>
 
-            <input type="submit" id="AkanName" name="" value="Get Akan Name"><br>
+            <input type="submit" id="AkanName" name="" value="Get Akan Name">
 
             <form onsubmit="return clearInput()">
               <input type="submit"  value="Clear input" class="clear">

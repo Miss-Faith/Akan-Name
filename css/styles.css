@@ -91,11 +91,11 @@ p {
 #AkanName{
   border-radius: 5px;
   color: #000000;
-  background-color: #bc8e52;
+  background-color: #ef7717;
   text-align: center;
   border: solid 1px #000000;
-  width: 108px;
-  height: 32px;
+  width: auto;
+  height: 26px;
   font-size: 13px;
   box-shadow: 2px 2px #000000;
 }
@@ -103,11 +103,20 @@ p {
 .clear{
   border-radius: 5px;
   color: #000000;
-  background-color: #bc8e52;
+  background-color: #ef7717;
   text-align: center;
   border: solid 1px #000000;
-  width: 108px;
-  height: 32px;
+  width: auto;
+  height: 26px;
+  font-size: 13px;
+  box-shadow: 2px 2px #000000;
+}
+
+.myform{
+  border-radius: 5px;
+  color: #000000;
+  background-color: #ef7717 ;
+  border: solid 1px #000000;
   font-size: 13px;
   box-shadow: 2px 2px #000000;
 }
