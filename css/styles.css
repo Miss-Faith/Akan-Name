@@ -1,5 +1,5 @@
 body {
-background-image: url("../images/image7.jpg");
+background-image: url("../images/image8.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 width: 100%;
@@ -19,7 +19,7 @@ p {
   text-align: center;
   color: #FB8C00;
   font-family: 'Kaushan Script', cursive;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 20px;
 }
 
