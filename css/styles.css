@@ -121,6 +121,14 @@ p {
   box-shadow: 2px 2px #000000;
 }
 
+#description {
+  text-align: center;
+  color: black;
+  font-family: 'Kaushan Script', cursive;
+  text-decoration: none;
+  font-size: 15px;
+}
+
 a:hover{
   color: #006B3F;
 }
